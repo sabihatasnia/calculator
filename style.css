@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 50px;
+    background: #e3f9ff;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.calculator {
+    background: #304452;
+    box-shadow: 0.5px 0.5px 10px 1px #4444443d;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.calculator form input {
+    border: 0;
+    outline: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
+    background: transparent;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+}
+
+form .display {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+    border: 2px solid #33ffd8;
+    border-radius: 10px;
+}
+
+form .display input {
+    text-align: right;
+    flex: 1;
+    font-size: 45px;
+    box-shadow: none;
+}
+
+form input.equal {
+    width: 145px;
+}
+
+form input.operator {
+    color: #33ffd8;
+}
+
+.author {
+    background: #304452;
+    box-shadow: 0.5px 0.5px 10px 1px #4444443d;
+    padding-block: 30px;
+    padding-inline: 40px;
+    border-radius: 10px;
+    font-size: 26px;
+    color: #33ffd8;
+    text-align: center;
+    font-family: "Montserrat";
+}
+
+.author a {
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #bbb;
+    transition: all 0.3s ease-in-out;
+}
+
+.author span {
+    animation: animate 1s ease-in-out 0s infinite;
+}
+
+@keyframes animate {
+    100%,
+    0% {
+        color: #33ff8f;
+    }
+
+    33% {
+        color: #f4f748;
+        opacity: 0.8;   
+    }
+    66% {
+        color: #33ffd8;
+        opacity: 1;   
+    }
+}
+
+.author a:hover {
+    color: #ddd;
+}
