@@ -10,7 +10,7 @@
 .container {
     width: 100%;
     min-height: 100vh;
-    padding: 50px;
+    padding: 30px;
     background: #e3f9ff;
     display: flex;
     flex-direction: column;
@@ -26,21 +26,28 @@
     border-radius: 10px;
 }
 
+.calculator form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .calculator form input {
     border: 0;
     outline: 0;
-    width: 60px;
-    height: 60px;
-    border-radius: 10px;
+    width: min(60px, 10vw);
+    height: min(60px, 10vw);
+    border-radius: min(10px, 2vw);
     box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.1), 5px 5px 15px rgba(0, 0, 0, 0.2);
     background: transparent;
     font-size: 20px;
     color: #fff;
     cursor: pointer;
-    margin: 10px;
+    margin: min(10px, 2vw);
 }
 
 form .display {
+    width: 100%;
     display: flex;
     justify-content: flex-end;
     margin: 20px 0;
@@ -51,12 +58,12 @@ form .display {
 form .display input {
     text-align: right;
     flex: 1;
-    font-size: 45px;
+    font-size: min(45px, 7vw);
     box-shadow: none;
 }
 
 form input.equal {
-    width: 145px;
+    width: min(145px, 26vw);
 }
 
 form input.operator {
@@ -67,9 +74,9 @@ form input.operator {
     background: #304452;
     box-shadow: 0.5px 0.5px 10px 1px #4444443d;
     padding-block: 30px;
-    padding-inline: 40px;
+    padding-inline: min(40px, 10vw);
     border-radius: 10px;
-    font-size: 26px;
+    font-size: min(26px, 5vw);
     color: #33ffd8;
     text-align: center;
     font-family: "Montserrat";
@@ -79,7 +86,7 @@ form input.operator {
     display: inline-block;
     margin-top: 5px;
     text-decoration: none;
-    font-size: 18px;
+    font-size: min(18px, 3vw);
     color: #bbb;
     transition: all 0.3s ease-in-out;
 }
@@ -109,19 +116,4 @@ form input.operator {
         opacity: 1;   
     }
 }
-
-@media screen and (max-width: 768px) {
-   .container {
-    padding: 10px;
-}
-    .calculator {
-    padding: 10px;
-}
-    .calculator form input {
-    width: 50px;
-    height: 50px;
-}
-
-  }
-
 
